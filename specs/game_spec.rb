@@ -18,31 +18,31 @@ class TestGame < MiniTest::Test
   end
 
   def test_rock_paper()
-    assert_equal('Paper wins!', @game1.play_game())
+    assert_equal('paper', @game1.play_game())
   end
   def test_rock_scissors()
-    assert_equal('Rock wins!', @game2.play_game())
+    assert_equal('rock', @game2.play_game())
   end
   def test_paper_scissors()
-    assert_equal('Scissors wins!', @game3.play_game())
+    assert_equal('scissors', @game3.play_game())
   end
   def test_paper_rock()
-    assert_equal('Paper wins!', @game4.play_game())
+    assert_equal('paper', @game4.play_game())
   end
   def test_scissors_rock()
-    assert_equal('Rock wins!', @game5.play_game())
+    assert_equal('rock', @game5.play_game())
   end
   def test_scissors_paper()
-    assert_equal('Scissors wins!', @game6.play_game())
+    assert_equal('scissors', @game6.play_game())
   end
   def test_rock_rock()
-    assert_equal('Its a draw!', @game7.play_game())
+    assert_equal('nobody', @game7.play_game())
   end
   def test_paper_paper()
-    assert_equal('Its a draw!', @game8.play_game())
+    assert_equal('nobody', @game8.play_game())
   end
   def test_scissors_scissors()
-    assert_equal('Its a draw!', @game9.play_game())
+    assert_equal('nobody', @game9.play_game())
   end
 
 

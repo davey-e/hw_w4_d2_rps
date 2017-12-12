@@ -6,15 +6,14 @@ class Game
   end
 
   def play_game()
-    return 'Paper wins!' if @hand1 == 'rock' && @hand2 == 'paper'
-    return 'Rock wins!' if @hand1 == 'rock' && @hand2 == 'scissors'
-    return 'Scissors wins!' if @hand1 == 'paper' && @hand2 == 'scissors'
-    return 'Paper wins!' if @hand1 == 'paper' && @hand2 == 'rock'
-    return 'Rock wins!' if @hand1 == 'scissors' && @hand2 == 'rock'
-    return 'Scissors wins!' if @hand1 == 'scissors' && @hand2 == 'paper'
-    return 'Its a draw!' if @hand1 == 'rock' && @hand2 == 'rock'
-    return 'Its a draw!' if @hand1 == 'paper' && @hand2 == 'paper'
-    return 'Its a draw!' if @hand1 == 'scissors' && @hand2 == 'scissors'
+    @draw = 'nobody'
+    return @hand2 if @hand1 == 'rock' && @hand2 == 'paper'
+    return @hand1 if @hand1 == 'rock' && @hand2 == 'scissors'
+    return @hand2 if @hand1 == 'paper' && @hand2 == 'scissors'
+    return @hand1 if @hand1 == 'paper' && @hand2 == 'rock'
+    return @hand2 if @hand1 == 'scissors' && @hand2 == 'rock'
+    return @hand1 if @hand1 == 'scissors' && @hand2 == 'paper'
+    return @draw if @hand1 == @hand2
   end
 
 end
